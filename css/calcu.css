@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    color: #333333; /* Texto cinza escuro */
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #555555; /* Cinza médio */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    background-color: #dcdcdc; /* Cinza mais claro */
+}
+
+footer {
+    background-color: #333333; /* Cinza bem escuro */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

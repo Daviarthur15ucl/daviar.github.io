@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="../css/calcu.css"> <!-- Vamos usar um arquivo CSS separado -->
+    <script src="../js/portf.js" defer></script>
+    
+    <!-- Conversor de Temperatura -->
+<section id="conversor">
+    <h2>Conversor de Temperatura</h2>
+    <input type="number" id="tempValor" placeholder="Temperatura">
+    <select id="tempUnit" onchange="converterTemperatura()">
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</option>
+        <option value="K">Kelvin</option>
+    </select>
+    <p id="resultadoTemp">Resultado: </p>
+</section>

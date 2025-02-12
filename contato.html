@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contato</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        function mostrarInformacoes(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            // Captura os valores dos campos
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const assunto = document.getElementById("assunto").value;
+            const mensagem = document.getElementById("mensagem").value;
+
+            // Exibe os dados na página
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `
+                <h3>Informações Enviadas:</h3>
+                <p><strong>Nome:</strong> ${nome}</p>
+                <p><strong>E-mail:</strong> ${email}</p>
+                <p><strong>Assunto:</strong> ${assunto}</p>
+                <p><strong>Mensagem:</strong> ${mensagem}</p>
+            `;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Entre em Contato Conosco</h1>
+    </header>
+    
+    <div class="container">
+        <h2>Formulário de Contato</h2>
+        <form id="contactForm" onsubmit="mostrarInformacoes(event)">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="resultado" class="result"></div>
+    </div>
+</body>
+</html>
